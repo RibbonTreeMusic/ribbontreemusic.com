@@ -1,0 +1,23 @@
+{
+  "name": "ribbontreemusic.com",
+  "version": "1.0.0",
+  "description": "RibbonTree's personal website.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo 'Development mode started...'   && npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build": "echo 'Creating production build...' && rm -rf ./_build && mkdir _build && cp ./src/index.html ./_build/ && npx tailwindcss -i ./src/input.css -o ./_build/output.css && cp ./src/** ./_build/ && touch _build/.nojekyll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RibbonTreeMusic/ribbontreemusic.com.git"
+  },
+  "author": "RibbonTreeMusic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RibbonTreeMusic/ribbontreemusic.com/issues"
+  },
+  "homepage": "https://github.com/RibbonTreeMusic/ribbontreemusic.com#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}

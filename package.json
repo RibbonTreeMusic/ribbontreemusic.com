@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "echo 'Development mode started...'   && npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "build": "echo 'Creating production build...' && rm -rf ./_build && mkdir _build && cp ./src/index.html ./_build/ && npx tailwindcss -i ./src/input.css -o ./_build/output.css && cp ./src/** ./_build/ && touch _build/.nojekyll"
+    "build": "echo 'Creating production build...' && rm -rf ./_build && mkdir _build && cp ./src/** ./_build/ && npx tailwindcss -i ./src/input.css -o ./_build/output.css"
   },
   "repository": {
     "type": "git",

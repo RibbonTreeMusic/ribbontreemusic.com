@@ -4,6 +4,6 @@
 
 @layer components {
     .icon-wrapper {
-      @apply hover:scale-110 hover:cursor-pointer transition [&>*]:w-7 [&>*]:h-7 text-slate-300;
+      @apply hover:scale-110 hover:cursor-pointer transition [&>*]:w-7 [&>*]:h-7 text-slate-700;
     }
   }

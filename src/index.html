@@ -43,7 +43,7 @@
         height="306"
         viewBox="0 0 1036 306"
         fill="currentColor"
-        class="text-black sm:w-80 sm:h-40 w-60 h-32 -mt-10"
+        class="text-black sm:w-80 sm:h-40 w-72 h-32 -mt-10"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g clip-path="url(#clip0_1324_74)">
@@ -156,14 +156,12 @@
     </div>
   </body>
   <script>
-    // Create image element but don't insert into DOM.
     const imageUrl = "./bg2.jpg";
     const body = document.querySelector("body");
-    // const bgDiv = document.querySelector("#bg");
     let preloaderImg = document.createElement("img");
     preloaderImg.src = imageUrl;
     preloaderImg.addEventListener("load", (event) => {
-      document.querySelector("#bg").classList.add(`bg-[url('./bg2.jpg')]`);
+      document.querySelector("#bg").classList.add(`bg-[url('${imageUrl}')]`);
       setTimeout(() => {
         body.style.opacity = 1;
       }, 150);

@@ -4,8 +4,8 @@
   "description": "RibbonTree's personal website.",
   "main": "index.js",
   "scripts": {
-    "dev": "echo 'Development mode started...'   && npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "build": "echo 'Creating production build...' && rm -rf ./_build && mkdir _build && cp ./src/** ./_build/ && npx tailwindcss -i ./src/input.css -o ./_build/output.css"
+    "dev": "./scripts/dev.sh",
+    "build": "./scripts/build.sh"
   },
   "repository": {
     "type": "git",

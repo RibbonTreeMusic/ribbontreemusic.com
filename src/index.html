@@ -30,11 +30,10 @@
     </script>
   </head>
 
-  <body
-    class="bg-[url('./bg2.jpg')] bg-top bg-cover h-screen w-screen relative"
-  >
+  <body class="h-screen w-screen relative" style="opacity: 0">
     <div
-      class="bg-neutral-200 absolute top-0 w-full h-full opacity-80 z-10"
+      id="bg"
+      class="absolute top-0 bg-top left-0 bg-cover h-screen w-screen z-0 brightness-110 opacity-40"
     ></div>
     <div
       class="flex items-center justify-center w-full h-full flex-col z-50 absolute"
@@ -156,4 +155,19 @@
       </div>
     </div>
   </body>
+  <script>
+    // Create image element but don't insert into DOM.
+    const imageUrl = "./bg2.jpg";
+    const body = document.querySelector("body");
+    // const bgDiv = document.querySelector("#bg");
+    let preloaderImg = document.createElement("img");
+    preloaderImg.src = imageUrl;
+    preloaderImg.addEventListener("load", (event) => {
+      document.querySelector("#bg").classList.add(`bg-[url('./bg2.jpg')]`);
+      setTimeout(() => {
+        body.style.opacity = 1;
+      }, 150);
+      preloaderImg = null;
+    });
+  </script>
 </html>

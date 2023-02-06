@@ -161,7 +161,8 @@
     let preloaderImg = document.createElement("img");
     preloaderImg.src = imageUrl;
     preloaderImg.addEventListener("load", (event) => {
-      document.querySelector("#bg").classList.add(`bg-[url('${imageUrl}')]`);
+      document.querySelector("#bg").style.backgroundImage = `url('${imageUrl}'`;
+      // document.
       setTimeout(() => {
         body.style.opacity = 1;
       }, 150);
